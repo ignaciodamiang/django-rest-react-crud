@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 TaskCard.propTypes = {
   task: PropTypes.shape({
@@ -10,8 +11,15 @@ TaskCard.propTypes = {
 };
 
 export function TaskCard({ task }) {
+  const navigate = useNavigate();
+
   return (
-    <div>
+    <div
+      style={{ background: 'black' }}
+      onClick={() => {
+        navigate(`/tasks/edit/${task.id}`);
+      }}
+    >
       <h1>{task.title}</h1>
       <p>{task.description}</p>
       {task.done ? <p>Done</p> : <p>Undone</p>}
