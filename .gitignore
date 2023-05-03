@@ -56,3 +56,5 @@ yarn.lock
 *.tmp
 *.pid
 *.sw[op]
+
+staticfiles/
