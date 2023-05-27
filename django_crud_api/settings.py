@@ -126,6 +126,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ALLOWED_HOSTS = ["*"]
+
 # cors authorizations
 CORS_ORIGIN_WHITELIST = ['http://localhost:5173', 'http://localhost:8000', 'https://django-rest-react-crud-production.up.railway.app']
 
