@@ -136,3 +136,5 @@ REST_FRAMEWORK = {
 }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+CSRF_TRUSTED_ORIGINS = ["http://*", "https://django-rest-react-crud-production.up.railway.app"]
