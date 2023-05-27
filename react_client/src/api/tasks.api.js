@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+const URL =
+  import.meta.env.VITE_NODE_ENV === 'production'
+    ? import.meta.env.VITE_PROD_BACKEND_URL
+    : import.meta.env.VITE_LOCAL_BACKEND_URL;
+
 const tasksApi = axios.create({
-  baseURL: 'http://localhost:8000/tasks/api/v1/',
+  baseURL: `${URL}/tasks/api/v1/`,
 });
 
 export const getAllTasks = () => tasksApi.get('/');
